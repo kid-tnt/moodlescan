@@ -105,7 +105,7 @@ By Victor Herrera - supported by www.incode.cl
 Version 1.0 - November/2022
     """)
     print ("""
-Modified By th4n9ng0
+Modified By NgoVanThang_D18CQAT04-B
     """)
     print ("." * 109)
     print ("")
