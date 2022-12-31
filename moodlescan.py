@@ -343,6 +343,7 @@ def santize(versions):
     versions=(re.split('v|\-',versions))
     for sub_ver in versions:
         if('.'in sub_ver):
+            sub_ver = re.sub(r"\.0$", "", sub_ver)
             return sub_ver
 #count Digit of numbers
 def countDigit(n): 
@@ -372,14 +373,14 @@ def isOlder(v1,v2):
 
     for i in range(len(arr1)):
         #số chữ số nhỏ hơn thì x10 rồi sô sánh
-        if(countDigit(arr1[i])>countDigit(arr2[i])): 
-            if(arr1[i]<arr2[i]*10):
-                return True
-            else: return False
-        elif (countDigit(arr1[i])<countDigit(arr2[i])):
-            if(arr1[i]*10<arr2[i]):
-                return True
-            else: return False
+        # if(countDigit(arr1[i])>countDigit(arr2[i])): 
+        #     if(arr1[i]<arr2[i]*10):
+        #         return True
+        #     else: return False
+        # elif (countDigit(arr1[i])<countDigit(arr2[i])):
+        #     if(arr1[i]*10<arr2[i]):
+        #         return True
+        #     else: return False
         if arr1[i]<arr2[i]:
             return True
         elif arr1[i]>arr2[i]:
@@ -407,14 +408,14 @@ def isNewer(v1,v2):
             arr1.append(0)
 
     for i in range(len(arr1)):
-        if(countDigit(arr1[i])>countDigit(arr2[i])): 
-            if(arr1[i]>arr2[i]*10):
-                return True
-            else: return False
-        elif (countDigit(arr1[i])<countDigit(arr2[i])):
-            if(arr1[i]*10>arr2[i]):
-                return True
-            else: return False
+        # if(countDigit(arr1[i])>countDigit(arr2[i])): 
+        #     if(arr1[i]>arr2[i]*10):
+        #         return True
+        #     else: return False
+        # elif (countDigit(arr1[i])<countDigit(arr2[i])):
+        #     if(arr1[i]*10>arr2[i]):
+        #         return True
+        #     else: return False
         if arr1[i]>arr2[i]:
             return True
         elif arr1[i]<arr2[i]:
